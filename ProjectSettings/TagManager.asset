@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MovingObj
+  - Trap
+  - CheckEnd
+  - 3nana
+  - SpikeFalling
+  - Wall
+  - Enemy
+  - destroy
+  - Bird
+  - killenemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - BulletPlant
+  - Plant
+  - Trap
+  - Ground
+  - uable
+  - bird
+  - bee
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3326069397
+    locked: 0
+  - name: Terrain
+    uniqueID: 2389901991
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: uable
+    uniqueID: 1342079495
+    locked: 0
