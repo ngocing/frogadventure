@@ -212,6 +212,7 @@ public class PlayerController4 : MonoBehaviour
             die = true;
             deathEft.Play();
             rb.bodyType = RigidbodyType2D.Static;
+            AdManager.instant.ShowInter();
         }
         if(other.gameObject.CompareTag("Bird")){
             rb.AddForce(new Vector2(rb.velocity.x, 6));
@@ -226,6 +227,7 @@ public class PlayerController4 : MonoBehaviour
             die = true;
             deathEft.Play();
             rb.bodyType = RigidbodyType2D.Static;
+            AdManager.instant.ShowInter();
         }
     }
 }
