@@ -17,7 +17,7 @@ public class PlayerController4 : MonoBehaviour
     public float jumpForce = 12;
     public float horizontalJumpForce = 6;
     public float horizontal;
-    public bool jumpPressed;
+    public bool canJump;
     public int direction = 1;
     public bool canMove = true;
 
@@ -78,22 +78,22 @@ public class PlayerController4 : MonoBehaviour
 
     void AirMovement()
     {
-        if (jumpPressed && onGround)
+        if (canJump && onGround)
         {
-            jumpPressed = false;
+            canJump = false;
             doubleJump = true;
             rb.velocity = Vector2.zero;
             Jump();
         }
-        else if(jumpPressed && doubleJump){
+        else if(canJump && doubleJump){
             doubleJump = false;
             Jump();
         }
-        else if(jumpPressed && onWall && !onGround)
+        else if(canJump && onWall && !onGround)
         {
             canMove = false;
             jumpFinish = Time.time + wallJumpDuration;
-            jumpPressed = false;
+            canJump = false;
             jumpFromWall = true;
             Flip();
 
@@ -122,12 +122,12 @@ public class PlayerController4 : MonoBehaviour
     {
         if (clearInputs)
         {
-            jumpPressed = false;
+            canJump = false;
             clearInputs = false;
         }
 
        
-        jumpPressed = jumpPressed || Input.GetButtonDown("Jump");
+        canJump = canJump || Input.GetButtonDown("Jump");
 
         if(canMove)
             horizontal = Input.GetAxis("Horizontal");
